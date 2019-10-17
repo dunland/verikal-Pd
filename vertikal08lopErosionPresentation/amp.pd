@@ -1,0 +1,96 @@
+#N canvas 1201 210 695 390 10;
+#X obj 60 44 int;
+#X obj 90 44 + 1;
+#X floatatom 60 65 5 0 0 0 - - -, f 5;
+#X obj 60 85 % 120;
+#X floatatom 60 106 5 0 0 0 - - -, f 5;
+#X obj 60 126 tabread ampsValues;
+#X floatatom 60 147 5 0 0 0 - - -, f 5;
+#X obj 200 126 tabread ampsOut3;
+#X floatatom 200 147 5 0 0 0 - - -, f 5;
+#X obj 138 167 max;
+#X floatatom 138 186 5 0 0 0 - - -, f 5;
+#X obj 183 303 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4152 1;
+#X obj 200 44 int;
+#X obj 230 44 + 1;
+#X floatatom 200 65 5 0 0 0 - - -, f 5;
+#X obj 200 85 % 120;
+#X floatatom 200 106 5 0 0 0 - - -, f 5;
+#X obj 200 8 r m300;
+#X floatatom 138 244 5 0 0 0 - - -, f 5;
+#X obj 139 5 loadbang;
+#X obj 138 284 line;
+#X msg 138 265 \$1 200;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array thisAmp+\$0 120 float 3;
+#A 0 0.21432 0.22296 0.22872 0.24384 0.25344 0.27744 0.29208 0.30856
+0.32696 0.23568 0.23568 0.23568 0.24384 0.25344 0.26464 0.27744 0.29208
+0.30856 0.32696 0.34728 0.36952 0.3936 0.41944 0.4468 0.47568 0.50568
+0.53656 0.56816 0.6 0.6 0.63184 0.66344 0.69432 0.72432 0.7532 0.78056
+0.8064 0.83048 0.85272 0.87304 0.89144 0.90792 0.92256 0.93536 0.94656
+0.95616 0.96432 0.97128 0.97704 0.98176 0.98568 0.98888 0.99144 0.99344
+0.99504 0.99624 0.9972 0.99792 0.99848 0.99848 0.99792 0.9972 0.99624
+0.99624 0.9972 0.99848 0.99848 0.99848 0.99792 0.9972 0.99624 0.99504
+0.99144 0.98176 0.97704 0.97128 0.96432 0.95616 0.94656 0.92256 0.90792
+0.90792 0.89144 0.87304 0.8064 0.7532 0.72432 0.69432 0.66344 0.6 0.6
+0.56816 0.53656 0.47568 0.4468 0.41944 0.3936 0.36952 0.34728 0.32696
+0.30856 0.29208 0.27744 0.26464 0.25344 0.24384 0.23568 0.22872 0.22296
+0.21824 0.21432 0.21112 0.20856 0.20656 0.20496 0.20376 0.20496 0.20856
+0.21112 0.21112;
+#X coords 0 1 120 0 200 140 1 0 0;
+#X restore 403 42 graph;
+#X obj 15 347 tabwrite ampVisualizer1;
+#X obj 16 327 tabwrite thisAmp+\$0;
+#X floatatom 138 48 5 0 0 0 - - -, f 5;
+#X obj 289 211 *;
+#X obj 138 28 i \$1;
+#X obj 138 304 s~ \$2;
+#X obj 13 368 tabwrite \$2;
+#X text 91 370 kann de/aktiviert werden für verrückte Visuals;
+#X floatatom 314 192 5 0 0 0 - - -, f 5;
+#X obj 289 231 / 100;
+#X obj 314 152 random 100;
+#X obj 314 172 i;
+#X obj 138 225 + 0.2;
+#X obj 138 205 * 0.8;
+#X obj 60 8 r mAmps;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 0 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 24 1;
+#X connect 5 0 6 0;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 36 0;
+#X connect 12 0 13 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 1;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 7 0;
+#X connect 17 0 12 0;
+#X connect 18 0 21 0;
+#X connect 18 0 23 0;
+#X connect 18 0 24 0;
+#X connect 19 0 27 0;
+#X connect 19 0 33 0;
+#X connect 20 0 11 0;
+#X connect 20 0 28 0;
+#X connect 21 0 20 0;
+#X connect 25 0 23 1;
+#X connect 25 0 0 1;
+#X connect 25 0 12 1;
+#X connect 26 0 32 0;
+#X connect 27 0 25 0;
+#X connect 31 0 26 1;
+#X connect 33 0 34 0;
+#X connect 34 0 31 0;
+#X connect 35 0 18 0;
+#X connect 36 0 35 0;
+#X connect 37 0 0 0;
