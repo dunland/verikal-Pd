@@ -1,4 +1,4 @@
-#N canvas 402 61 958 983 12;
+#N canvas 4 29 998 994 12;
 #X obj 19 17 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X msg 17 45 \; pd dsp \$1;
@@ -23,13 +23,13 @@
 #X obj 116 328 r stop;
 #X obj 116 565 r stop;
 #X obj 357 925 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 3890 1;
+-232576 -1 -1 0 1;
 #X obj 289 668 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
 -232576 -1 -1 0 1;
 #X obj 307 429 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 10606 1;
+-232576 -1 -1 0 1;
 #X obj 409 302 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 10617 1;
+-232576 -1 -1 0 1;
 #X obj 790 3827 s play;
 #X obj 790 3804 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -40,7 +40,7 @@
 #X obj 54 302 s~ out_1_L;
 #N canvas 947 0 958 998 amplitudes 0;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array ampsValues 120 float 3;
+#X array ampsValues 120 float 3 black black;
 #A 0 0.0019 0.0026 0.0035 0.0047 0.0062 0.0082 0.0107 0.0139 0.0179
 0.0228 0.0287 0.0359 0.0446 0.0548 0.0668 0.0808 0.0968 0.1151 0.1357
 0.1587 0.1841 0.2119 0.242 0.2743 0.3085 0.3446 0.3821 0.4207 0.4602
@@ -53,7 +53,7 @@
 0.4602 0.4207 0.3821 0.3446 0.3085 0.2743 0.242 0.2119 0.1841 0.1587
 0.1357 0.1151 0.0968 0.0808 0.0668 0.0548 0.0446 0.0359 0.0287 0.0228
 0.0179 0.0139 0.0107 0.0082 0.0062 0.0047 0.0035 0.0026 0.0019;
-#X coords 0 1 120 0 200 140 1 0 0;
+#X coords 0 1 120 0 200 140 1;
 #X restore 30 38 graph;
 #X obj 387 561 int;
 #X obj 419 560 + 1;
@@ -101,7 +101,7 @@
 #X text 3 875 amp \$1 \$2 \$3 drei argumente \, da \$1 innerhalb der
 abstraction genutzt werden muss;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array ampsOut2 120 float 5;
+#X array ampsOut2 120 float 5 black black;
 #A 0 0.8643 0.8643 0.8643 0.8849 0.9032 0.9192 0.9332 0.9554 0.9641
 0.9713 0.9713 0.9772 0.9861 0.9893 0.9918 0.9938 0.9953 0.9953 0.9965
 0.9974 0.9981 0.9981 0.9981 0.9974 0.9974 0.9965 0.9953 0.9938 0.9893
@@ -114,10 +114,10 @@ abstraction genutzt werden muss;
 0.0287 0.0359 0.0548 0.0668 0.0808 0.0968 0.1151 0.1357 0.1587 0.2119
 0.242 0.2743 0.3085 0.3085 0.3446 0.3821 0.5 0.5 0.5398 0.5793 0.5793
 0.6179 0.6915 0.6915 0.7257 0.758 0.758 0.7881 0.8159 0.8159;
-#X coords 0 1 119 0 200 140 1 0 0;
+#X coords 0 1 119 0 200 140 1;
 #X restore 328 249 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array ampsOut1 120 float 5;
+#X array ampsOut1 120 float 5 black black;
 #A 0 0.2743 0.2743 0.2743 0.2743 0.3446 0.3446 0.4207 0.4207 0.5 0.5
 0.5398 0.5 0.5398 0.5398 0.6179 0.6179 0.6915 0.6915 0.758 0.758 0.8159
 0.8159 0.8643 0.8643 0.9032 0.9032 0.9554 0.9554 0.9713 0.9713 0.9821
@@ -130,12 +130,12 @@ abstraction genutzt werden muss;
 0.0062 0.0062 0.0035 0.0035 0.0019 0.0019 0.0019 0.0019 0.0035 0.0035
 0.0062 0.0062 0.0107 0.0107 0.0107 0.0107 0.0179 0.0179 0.0287 0.0287
 0.0446 0.0446 0.0668 0.0668 0.0968 0.0968 0.2119 0.2119;
-#X coords 0 1 119 0 200 140 1 0 0;
+#X coords 0 1 119 0 200 140 1;
 #X restore 328 249 graph;
 #X msg 340 420 \; ampsOut2 xticks 0 7.5 1;
 #X obj 340 400 loadbang;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array ampOut1 120 float 3;
+#X array ampOut1 120 float 3 black black;
 #A 0 0.0446 0.0446 0.0446 0.0446 0.0668 0.0968 0.0968 0.2119 0.2119
 0.2743 0.2743 0.3446 0.3446 0.4207 0.4207 0.5 0.5 0.5398 0.5 0.5398
 0.5398 0.6179 0.6179 0.6915 0.6915 0.758 0.758 0.8159 0.8159 0.8643
@@ -148,7 +148,7 @@ abstraction genutzt werden muss;
 0.0668 0.0668 0.0446 0.0446 0.0287 0.0179 0.0107 0.0107 0.0062 0.0062
 0.0035 0.0035 0.0019 0.0019 0.0019 0.0019 0.0035 0.0035 0.0062 0.0062
 0.0107 0.0107 0.0107 0.0107 0.0179 0.0179 0.0179 0.0287 0.0287;
-#X array ampOut2 120 float 3;
+#X array ampOut2 120 float 3 black black;
 #A 0 0.8159 0.8159 0.8159 0.8159 0.8643 0.8849 0.9032 0.9192 0.9332
 0.9554 0.9641 0.9713 0.9713 0.9772 0.9861 0.9893 0.9918 0.9938 0.9953
 0.9953 0.9965 0.9974 0.9981 0.9981 0.9981 0.9974 0.9974 0.9965 0.9953
@@ -161,12 +161,12 @@ abstraction genutzt werden muss;
 0.0179 0.0228 0.0287 0.0359 0.0548 0.0668 0.0808 0.0968 0.1151 0.1357
 0.1587 0.2119 0.242 0.2743 0.3085 0.3085 0.3446 0.3821 0.5 0.5 0.5398
 0.5793 0.5793 0.6179 0.6915 0.6915 0.7257 0.758 0.758 0.7881;
-#X coords 0 1 120 0 200 140 1 0 0;
+#X coords 0 1 120 0 200 140 1;
 #X restore 32 214 graph;
 #X text 465 478 ARRAY SORTING: disabled! now walking through array
 ;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array ampsOut3 120 float 3;
+#X array ampsOut3 120 float 3 black black;
 #A 0 0.7881 0.7881 0.7881 0.8159 0.8159 0.8643 0.8849 0.9032 0.9192
 0.9332 0.9554 0.9641 0.9713 0.9713 0.9772 0.9861 0.9893 0.9918 0.9938
 0.9953 0.9953 0.9965 0.9974 0.9981 0.9981 0.9981 0.9974 0.9974 0.9965
@@ -179,7 +179,7 @@ abstraction genutzt werden muss;
 0.0139 0.0179 0.0228 0.0287 0.0359 0.0548 0.0668 0.0808 0.0968 0.1151
 0.1357 0.1587 0.2119 0.242 0.2743 0.3085 0.3085 0.3446 0.3821 0.5 0.5
 0.5398 0.5793 0.5793 0.6179 0.6915 0.6915 0.7257 0.758 0.758;
-#X coords 0 1 120 0 200 140 1 0 0;
+#X coords 0 1 120 0 200 140 1;
 #X restore 583 242 graph;
 #X obj 387 481 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -192,23 +192,23 @@ abstraction genutzt werden muss;
 #X obj 168 449 metro 200;
 #X obj 85 851 amp 113 amp16;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array amp01 120 float 2;
-#X array amp02 120 float 2;
-#X array amp03 120 float 2;
-#X array amp04 120 float 2;
-#X array amp05 120 float 2;
-#X array amp06 120 float 2;
-#X array amp07 120 float 2;
-#X array amp08 120 float 2;
-#X array amp09 120 float 2;
-#X array amp10 120 float 2;
-#X array amp11 120 float 2;
-#X array amp12 120 float 2;
-#X array amp13 120 float 2;
-#X array amp14 120 float 2;
-#X array amp15 120 float 2;
-#X array amp16 120 float 2;
-#X coords 0 1 120 0 200 140 2 0 0;
+#X array amp01 120 float 2 black black;
+#X array amp02 120 float 2 black black;
+#X array amp03 120 float 2 black black;
+#X array amp04 120 float 2 black black;
+#X array amp05 120 float 2 black black;
+#X array amp06 120 float 2 black black;
+#X array amp07 120 float 2 black black;
+#X array amp08 120 float 2 black black;
+#X array amp09 120 float 2 black black;
+#X array amp10 120 float 2 black black;
+#X array amp11 120 float 2 black black;
+#X array amp12 120 float 2 black black;
+#X array amp13 120 float 2 black black;
+#X array amp14 120 float 2 black black;
+#X array amp15 120 float 2 black black;
+#X array amp16 120 float 2 black black;
+#X coords 0 1 120 0 200 140 1;
 #X restore 479 958 graph;
 #X obj 85 788 amp 90 amp13;
 #X obj 84 506 amp 0 amp01;
@@ -276,13 +276,13 @@ abstraction genutzt werden muss;
 #X obj 122 450 r~ amp02;
 #X obj 177 240 *~;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array ampVisualizer1 120 float 1;
-#A 0 0.87113 0 0 0 0 0 0 0 0.97991 0 0 0 0 0 0 0.99671 0 0 0 0 0 0
-0 0.99818 0 0 0 0 0 0 0.97991 0 0 0 0 0 0 0 0.91943 0 0 0 0 0 0 0.75878
-0 0 0 0 0 0 0 0.56747 0 0 0 0 0 0 0.42887 0 0 0 0 0 0 0 0.62214 0 0
-0 0 0 0 0.78405 0 0 0 0 0 0 0 0.93224 0 0 0 0 0 0 0.98404 0 0 0 0 0
-0 0 0.99818 0 0 0 0 0 0 0.99426 0 0 0 0 0 0 0 0.96164 0 0 0 0 0 0;
-#X coords 0 1 120 0 200 140 1 0 0;
+#X array ampVisualizer1 120 float 1 black black;
+#A 0 0.56747 0 0 0 0 0 0 0 0.75878 0 0 0 0 0 0 0.90501 0 0 0 0 0 0
+0 0.97991 0 0 0 0 0 0 0.99671 0 0 0 0 0 0 0 0.99566 0 0 0 0 0 0 0.97487
+0 0 0 0 0 0 0 0.93224 0 0 0 0 0 0 0.98404 0 0 0 0 0 0 0 0.99818 0 0
+0 0 0 0 0.99671 0 0 0 0 0 0 0 0.96164 0 0 0 0 0 0 0.90501 0 0 0 0 0
+0 0 0.67786 0 0 0 0 0 0 0.51595 0 0 0 0 0 0 0 0.41109 0 0 0 0 0 0;
+#X coords 0 1 119 0 200 140 1;
 #X restore 538 501 graph;
 #X msg 185 50 stop;
 #X msg 853 3809 stop;
@@ -302,7 +302,7 @@ abstraction genutzt werden muss;
 #X obj 63 1010 s~ out_4_L;
 #X obj 171 1010 s~ out_4_R;
 #X obj 359 1154 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 4532 1;
+-232576 -1 -1 0 1;
 #X obj 58 1063 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 58 1033 r play;
@@ -313,7 +313,7 @@ abstraction genutzt werden muss;
 #X obj 65 1229 s~ out_5_L;
 #X obj 173 1229 s~ out_5_R;
 #X obj 309 1393 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 11133 1;
+-232576 -1 -1 0 1;
 #X obj 52 1291 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 52 1261 r play;
@@ -324,7 +324,7 @@ abstraction genutzt werden muss;
 #X obj 59 1457 s~ out_6_L;
 #X obj 167 1457 s~ out_6_R;
 #X obj 306 1609 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 11057 1;
+-232576 -1 -1 0 1;
 #X obj 49 1507 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 49 1477 r play;
@@ -335,7 +335,7 @@ abstraction genutzt werden muss;
 #X obj 56 1672 s~ out_7_L;
 #X obj 164 1673 s~ out_7_R;
 #X obj 305 1834 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 10829 1;
+-232576 -1 -1 0 1;
 #X obj 48 1732 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 48 1702 r play;
@@ -346,7 +346,7 @@ abstraction genutzt werden muss;
 #X obj 55 1907 s~ out_8_L;
 #X obj 163 1908 s~ out_8_R;
 #X obj 317 2077 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 10734 1;
+-232576 -1 -1 0 1;
 #X obj 54 1971 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 54 1941 r play;
@@ -397,7 +397,7 @@ abstraction genutzt werden muss;
 #X obj 103 3028 r~ amp13;
 #X obj 63 3125 s~ out_13_L;
 #X obj 309 3304 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 6474 1;
+-232576 -1 -1 0 1;
 #X obj 52 3202 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 52 3172 r play;
@@ -406,7 +406,7 @@ abstraction genutzt werden muss;
 #X obj 206 3315 *~;
 #X obj 101 3300 r~ amp14;
 #X obj 311 3541 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 11133 1;
+-232576 -1 -1 0 1;
 #X obj 54 3439 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 54 3409 r play;
@@ -416,7 +416,7 @@ abstraction genutzt werden muss;
 #X obj 103 3537 r~ amp15;
 #X obj 62 3614 s~ out_15_L;
 #X obj 307 3779 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--232576 -1 -1 10836 1;
+-232576 -1 -1 0 1;
 #X obj 50 3677 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 50 3647 r play;
@@ -426,7 +426,7 @@ abstraction genutzt werden muss;
 #X obj 99 3775 r~ amp16;
 #X obj 58 3852 s~ out_16_L;
 #X obj 613 1242 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 12086 1;
+-1 -1 12698 1;
 #X obj 171 2383 s~ out_10_R;
 #X obj 168 2619 s~ out_11_R;
 #X obj 167 2870 s~ out_12_R;
@@ -437,27 +437,27 @@ abstraction genutzt werden muss;
 #X obj 165 3853 s~ out_16_R;
 #X obj 85 3585 pan pan15 160 5;
 #X obj 614 1283 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 8577 1;
+-1 -1 5061 1;
 #X obj 614 1323 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 6548 1;
+-1 -1 9734 1;
 #X obj 613 1122 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 12237 1;
+-1 -1 5270 1;
 #X obj 614 1163 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 213 1;
+-1 -1 12575 1;
 #X obj 614 1203 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 11414 1;
+-1 -1 12605 1;
 #X obj 613 1002 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 7292 1;
+-1 -1 11853 1;
 #X obj 614 1043 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 6730 1;
+-1 -1 9585 1;
 #X obj 614 1083 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 8182 1;
+-1 -1 8313 1;
 #X obj 613 882 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 11775 1;
+-1 -1 7643 1;
 #X obj 614 923 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 12329 1;
+-1 -1 5941 1;
 #X obj 614 963 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 8075 1;
+-1 -1 7735 1;
 #X obj 613 861 r pan01;
 #X obj 614 902 r pan02;
 #X obj 614 942 r pan03;
@@ -469,18 +469,18 @@ abstraction genutzt werden muss;
 #X obj 614 1182 r pan09;
 #X obj 613 1381 r pan14;
 #X obj 613 1402 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 1304 1;
+-1 -1 1791 1;
 #X obj 614 1443 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 10944 1;
+-1 -1 12178 1;
 #X obj 614 1422 r pan15;
 #X obj 614 1483 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 9283 1;
+-1 -1 6910 1;
 #X obj 614 1462 r pan16;
 #X obj 613 1221 r pan10;
 #X obj 614 1262 r pan11;
 #X obj 614 1302 r pan12;
 #X obj 614 1363 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 3074 1;
+-1 -1 2 1;
 #X obj 614 1342 r pan13;
 #X obj 91 3089 pan pan13 160 0;
 #X obj 74 3347 pan pan14 160 3;
@@ -552,7 +552,6 @@ output;
 #X text 168 3174 03:00;
 #X text 169 3412 03:34;
 #X text 166 3648 04:19;
-#X obj 755 386 writeSoundFile;
 #X text 686 49 * stärkere (anteilhafte) lopErosion;
 #X text 545 669 TODO: (for sound piece) count song stops \, make last
 songs fade out then;
@@ -572,28 +571,29 @@ songs fade out then;
 #X obj 49 3219 playsf ../../vertikal_Audio/2019-01/14.wav;
 #X obj 67 3442 playsf ../../vertikal_Audio/2019-01/15.wav;
 #X obj 53 3686 playsf ../../vertikal_Audio/2019-01/16.wav;
+#X obj 755 386 writ eSoundFile;
 #X connect 0 0 1 0;
 #X connect 2 0 207 1;
 #X connect 2 0 236 1;
 #X connect 2 0 237 1;
-#X connect 2 0 262 0;
+#X connect 2 0 261 0;
 #X connect 3 0 206 1;
 #X connect 3 0 224 1;
-#X connect 3 0 263 0;
+#X connect 3 0 262 0;
 #X connect 4 0 205 1;
 #X connect 4 0 222 1;
-#X connect 4 0 261 0;
+#X connect 4 0 260 0;
 #X connect 8 0 7 0;
 #X connect 9 0 2 0;
 #X connect 10 0 3 0;
 #X connect 11 0 4 0;
 #X connect 12 0 35 0;
 #X connect 14 0 237 1;
-#X connect 14 0 262 1;
+#X connect 14 0 261 1;
 #X connect 15 0 224 1;
-#X connect 15 0 263 1;
+#X connect 15 0 262 1;
 #X connect 16 0 222 1;
-#X connect 16 0 261 1;
+#X connect 16 0 260 1;
 #X connect 22 0 21 0;
 #X connect 23 0 36 0;
 #X connect 28 0 207 0;
@@ -613,130 +613,130 @@ songs fade out then;
 #X connect 40 0 39 1;
 #X connect 43 0 203 1;
 #X connect 43 0 226 1;
-#X connect 43 0 264 0;
+#X connect 43 0 263 0;
 #X connect 44 0 43 0;
 #X connect 45 0 226 1;
-#X connect 45 0 264 1;
+#X connect 45 0 263 1;
 #X connect 46 0 203 0;
 #X connect 47 0 203 2;
 #X connect 48 0 46 1;
 #X connect 48 0 47 1;
 #X connect 52 0 202 1;
 #X connect 52 0 238 1;
-#X connect 52 0 265 0;
+#X connect 52 0 264 0;
 #X connect 53 0 52 0;
 #X connect 54 0 238 1;
-#X connect 54 0 265 1;
+#X connect 54 0 264 1;
 #X connect 55 0 202 0;
 #X connect 56 0 202 2;
 #X connect 57 0 55 1;
 #X connect 57 0 56 1;
 #X connect 61 0 201 1;
 #X connect 61 0 227 1;
-#X connect 61 0 266 0;
+#X connect 61 0 265 0;
 #X connect 62 0 61 0;
 #X connect 63 0 227 1;
-#X connect 63 0 266 1;
+#X connect 63 0 265 1;
 #X connect 64 0 201 0;
 #X connect 65 0 201 2;
 #X connect 66 0 64 1;
 #X connect 66 0 65 1;
 #X connect 70 0 200 1;
 #X connect 70 0 228 1;
-#X connect 70 0 267 0;
+#X connect 70 0 266 0;
 #X connect 71 0 70 0;
 #X connect 72 0 228 1;
-#X connect 72 0 267 1;
+#X connect 72 0 266 1;
 #X connect 73 0 200 0;
 #X connect 74 0 200 2;
 #X connect 75 0 73 1;
 #X connect 75 0 74 1;
 #X connect 79 0 199 1;
 #X connect 79 0 229 1;
-#X connect 79 0 268 0;
+#X connect 79 0 267 0;
 #X connect 80 0 79 0;
 #X connect 81 0 229 1;
-#X connect 81 0 268 1;
+#X connect 81 0 267 1;
 #X connect 82 0 199 0;
 #X connect 83 0 199 2;
 #X connect 84 0 82 1;
 #X connect 84 0 83 1;
 #X connect 88 0 198 1;
 #X connect 88 0 230 1;
-#X connect 88 0 269 0;
+#X connect 88 0 268 0;
 #X connect 89 0 88 0;
 #X connect 90 0 230 1;
-#X connect 90 0 269 1;
+#X connect 90 0 268 1;
 #X connect 91 0 198 0;
 #X connect 92 0 198 2;
 #X connect 93 0 91 1;
 #X connect 93 0 92 1;
 #X connect 97 0 197 1;
 #X connect 97 0 231 1;
-#X connect 97 0 270 0;
+#X connect 97 0 269 0;
 #X connect 98 0 97 0;
 #X connect 99 0 231 1;
-#X connect 99 0 270 1;
+#X connect 99 0 269 1;
 #X connect 100 0 197 0;
 #X connect 101 0 197 2;
 #X connect 102 0 100 1;
 #X connect 102 0 101 1;
 #X connect 105 0 196 1;
 #X connect 105 0 232 1;
-#X connect 105 0 271 0;
+#X connect 105 0 270 0;
 #X connect 106 0 105 0;
 #X connect 107 0 232 1;
-#X connect 107 0 271 1;
+#X connect 107 0 270 1;
 #X connect 108 0 196 0;
 #X connect 109 0 196 2;
 #X connect 110 0 108 1;
 #X connect 110 0 109 1;
 #X connect 113 0 195 1;
 #X connect 113 0 233 1;
-#X connect 113 0 272 0;
+#X connect 113 0 271 0;
 #X connect 114 0 113 0;
 #X connect 115 0 233 1;
-#X connect 115 0 272 1;
+#X connect 115 0 271 1;
 #X connect 116 0 195 0;
 #X connect 117 0 195 2;
 #X connect 118 0 116 1;
 #X connect 118 0 117 1;
 #X connect 121 0 192 1;
 #X connect 121 0 234 1;
-#X connect 121 0 273 0;
+#X connect 121 0 272 0;
 #X connect 122 0 121 0;
 #X connect 123 0 234 1;
-#X connect 123 0 273 1;
+#X connect 123 0 272 1;
 #X connect 124 0 192 0;
 #X connect 125 0 192 2;
 #X connect 126 0 124 1;
 #X connect 126 0 125 1;
 #X connect 129 0 193 1;
 #X connect 129 0 225 1;
-#X connect 129 0 274 0;
+#X connect 129 0 273 0;
 #X connect 130 0 129 0;
 #X connect 131 0 225 1;
-#X connect 131 0 274 1;
+#X connect 131 0 273 1;
 #X connect 132 0 193 0;
 #X connect 133 0 193 2;
 #X connect 134 0 132 1;
 #X connect 134 0 133 1;
 #X connect 136 0 160 1;
 #X connect 136 0 223 1;
-#X connect 136 0 275 0;
+#X connect 136 0 274 0;
 #X connect 137 0 136 0;
 #X connect 138 0 223 1;
-#X connect 138 0 275 1;
+#X connect 138 0 274 1;
 #X connect 139 0 160 0;
 #X connect 140 0 160 2;
 #X connect 141 0 139 1;
 #X connect 141 0 140 1;
 #X connect 144 0 194 1;
 #X connect 144 0 235 1;
-#X connect 144 0 276 0;
+#X connect 144 0 275 0;
 #X connect 145 0 144 0;
 #X connect 146 0 235 1;
-#X connect 146 0 276 1;
+#X connect 146 0 275 1;
 #X connect 147 0 194 0;
 #X connect 148 0 194 2;
 #X connect 149 0 147 1;
@@ -845,37 +845,37 @@ songs fade out then;
 #X connect 238 0 55 0;
 #X connect 238 1 56 0;
 #X connect 238 2 51 0;
-#X connect 261 0 222 0;
-#X connect 261 1 222 2;
-#X connect 262 0 236 0;
-#X connect 262 0 237 0;
-#X connect 262 1 236 0;
-#X connect 262 1 237 2;
-#X connect 263 0 224 0;
-#X connect 263 1 224 2;
-#X connect 264 0 226 0;
-#X connect 264 1 226 2;
-#X connect 265 0 238 0;
-#X connect 265 1 238 2;
-#X connect 266 0 227 0;
-#X connect 266 1 227 2;
-#X connect 267 0 228 0;
-#X connect 267 1 228 2;
-#X connect 268 0 229 0;
-#X connect 268 1 229 2;
-#X connect 269 0 230 0;
-#X connect 269 1 230 2;
-#X connect 270 0 231 0;
-#X connect 270 1 231 2;
-#X connect 271 0 232 0;
-#X connect 271 1 232 2;
-#X connect 272 0 233 0;
-#X connect 272 1 233 2;
-#X connect 273 0 234 0;
-#X connect 273 1 234 2;
-#X connect 274 0 225 0;
-#X connect 274 1 225 2;
-#X connect 275 0 223 0;
-#X connect 275 1 223 2;
-#X connect 276 0 235 0;
-#X connect 276 1 235 2;
+#X connect 260 0 222 0;
+#X connect 260 1 222 2;
+#X connect 261 0 236 0;
+#X connect 261 0 237 0;
+#X connect 261 1 236 0;
+#X connect 261 1 237 2;
+#X connect 262 0 224 0;
+#X connect 262 1 224 2;
+#X connect 263 0 226 0;
+#X connect 263 1 226 2;
+#X connect 264 0 238 0;
+#X connect 264 1 238 2;
+#X connect 265 0 227 0;
+#X connect 265 1 227 2;
+#X connect 266 0 228 0;
+#X connect 266 1 228 2;
+#X connect 267 0 229 0;
+#X connect 267 1 229 2;
+#X connect 268 0 230 0;
+#X connect 268 1 230 2;
+#X connect 269 0 231 0;
+#X connect 269 1 231 2;
+#X connect 270 0 232 0;
+#X connect 270 1 232 2;
+#X connect 271 0 233 0;
+#X connect 271 1 233 2;
+#X connect 272 0 234 0;
+#X connect 272 1 234 2;
+#X connect 273 0 225 0;
+#X connect 273 1 225 2;
+#X connect 274 0 223 0;
+#X connect 274 1 223 2;
+#X connect 275 0 235 0;
+#X connect 275 1 235 2;

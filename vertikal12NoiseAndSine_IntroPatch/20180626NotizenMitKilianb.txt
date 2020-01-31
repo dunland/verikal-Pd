@@ -1,0 +1,19 @@
+general / improvements?
+
+sends/receives
+graph: ticks+labels
+for-Schleifen, z.B. in amplitudes.pd
+multiplikationen: ein objekt pro kanal nötig? JA
+
+multi channel?
+
+
+
+--------------------------
+
+amplifikation mit line ! sonst clicks..
+soundfiler: soundfile in array umwandeln
+number->mtof->number: (logarithmische) Übersetzung (per MIDI) für Bandpassfilter-Änderungen! --> bessere Wahrnehmung
+writesf~: soundfile schreiben und spektrum mit audacity analysieren
+pans mit sqrt, siehe pd pan16
+siehe panner amp10
