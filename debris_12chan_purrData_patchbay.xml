@@ -1,0 +1,61 @@
+<!DOCTYPE patchbay>
+<patchbay version="0.4.5" name="debris_12chan_purrData_patchbay">
+ <output-sockets>
+  <socket exclusive="off" type="jack-audio" client="pure_data_0" name="pure_data_0">
+   <plug>output0</plug>
+   <plug>output1</plug>
+   <plug>output2</plug>
+   <plug>output3</plug>
+   <plug>output4</plug>
+   <plug>output5</plug>
+   <plug>output6</plug>
+   <plug>output7</plug>
+   <plug>output8</plug>
+   <plug>output9</plug>
+   <plug>output10</plug>
+   <plug>output11</plug>
+  </socket>
+  <socket exclusive="off" type="jack-audio" client="pure_data_0" name="pure_data_0 2">
+   <plug>output6</plug>
+   <plug>output7</plug>
+   <plug>output8</plug>
+   <plug>output9</plug>
+   <plug>output10</plug>
+   <plug>output11</plug>
+  </socket>
+  <socket exclusive="off" type="alsa-midi" client="Midi Through" name="Midi Through">
+   <plug>Midi Through Port-0</plug>
+  </socket>
+ </output-sockets>
+ <input-sockets>
+  <socket exclusive="off" type="jack-audio" client="system" name="system">
+   <plug>playback_1</plug>
+   <plug>playback_2</plug>
+   <plug>playback_3</plug>
+   <plug>playback_4</plug>
+   <plug>playback_5</plug>
+   <plug>playback_6</plug>
+  </socket>
+  <socket exclusive="off" type="jack-audio" client="alsa_out" name="alsa_out">
+   <plug>playback_1</plug>
+   <plug>playback_2</plug>
+   <plug>playback_3</plug>
+   <plug>playback_4</plug>
+   <plug>playback_5</plug>
+   <plug>playback_6</plug>
+  </socket>
+  <socket exclusive="off" type="jack-audio" client="pure_data_0" name="pure_data_0">
+   <plug>input0</plug>
+   <plug>input1</plug>
+  </socket>
+  <socket exclusive="off" type="alsa-midi" client="Midi Through" name="Midi Through">
+   <plug>Midi Through Port-0</plug>
+  </socket>
+ </input-sockets>
+ <slots/>
+ <cables>
+  <cable output="pure_data_0" type="jack-audio" input="system"/>
+  <cable output="pure_data_0 2" type="jack-audio" input="alsa_out"/>
+ </cables>
+</patchbay>
+

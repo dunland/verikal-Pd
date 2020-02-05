@@ -1,0 +1,159 @@
+#N canvas 101 205 1117 755 10;
+#X obj 46 247 dac~ 1 2 3 4 5 6;
+#X obj 177 246 dac~ 7 8 9 10 11 12;
+#X msg 127 105 start;
+#X msg 186 105 stop;
+#X obj 136 191 *~;
+#X obj 262 77 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 175 191 *~;
+#X msg 57 76 open 02_Emerald_Rush.wav;
+#X obj 361 92 noise~;
+#X obj 361 157 *~ 0.1;
+#X obj 361 182 *~;
+#X obj 426 113 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 448 112 on/off;
+#X text 360 68 NOISE;
+#X msg 54 21 open 03_.wav;
+#X obj 361 117 lop~;
+#X msg 428 64 5000;
+#X obj 103 341 *~;
+#X obj 106 308 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 103 366 dac~ 1;
+#X obj 150 343 *~;
+#X obj 153 310 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 199 343 *~;
+#X obj 202 310 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 248 343 *~;
+#X obj 251 310 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 150 368 dac~ 2;
+#X obj 199 368 dac~ 3;
+#X obj 248 368 dac~ 4;
+#X obj 295 343 *~;
+#X obj 298 310 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 345 346 *~;
+#X obj 348 313 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 401 346 *~;
+#X obj 404 313 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 459 352 *~;
+#X obj 462 319 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 511 350 *~;
+#X obj 514 317 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 561 352 *~;
+#X obj 564 319 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 609 351 *~;
+#X obj 612 318 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 662 354 *~;
+#X obj 665 321 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 295 368 dac~ 5;
+#X obj 346 371 dac~ 6;
+#X obj 401 371 dac~ 7;
+#X obj 459 377 dac~ 8;
+#X obj 511 375 dac~ 9;
+#X obj 561 377 dac~ 10;
+#X obj 609 376 dac~ 11;
+#X obj 662 379 dac~ 12;
+#X floatatom 296 205 5 0 0 0 - - -, f 5;
+#X obj 591 107 noise~;
+#X obj 591 132 *~;
+#X obj 653 116 line~;
+#X floatatom 653 141 5 0 0 0 - - -, f 5;
+#X msg 651 81 1 \, 0 20;
+#X obj 632 33 metro 1000;
+#X obj 610 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 125 141 readsf~ 2;
+#X msg 55 45 open wal.wav;
+#X connect 2 0 61 0;
+#X connect 3 0 61 0;
+#X connect 4 0 0 0;
+#X connect 4 0 0 1;
+#X connect 4 0 0 2;
+#X connect 4 0 0 3;
+#X connect 4 0 0 4;
+#X connect 4 0 0 5;
+#X connect 5 0 4 1;
+#X connect 5 0 6 1;
+#X connect 5 0 53 0;
+#X connect 6 0 1 0;
+#X connect 6 0 1 1;
+#X connect 6 0 1 2;
+#X connect 6 0 1 3;
+#X connect 6 0 1 4;
+#X connect 6 0 1 5;
+#X connect 7 0 61 0;
+#X connect 8 0 15 0;
+#X connect 9 0 10 0;
+#X connect 10 0 17 0;
+#X connect 10 0 20 0;
+#X connect 10 0 43 0;
+#X connect 10 0 41 0;
+#X connect 10 0 39 0;
+#X connect 10 0 37 0;
+#X connect 10 0 35 0;
+#X connect 10 0 33 0;
+#X connect 10 0 31 0;
+#X connect 10 0 29 0;
+#X connect 10 0 24 0;
+#X connect 10 0 22 0;
+#X connect 11 0 10 1;
+#X connect 14 0 61 0;
+#X connect 15 0 9 0;
+#X connect 16 0 15 1;
+#X connect 17 0 19 0;
+#X connect 18 0 17 1;
+#X connect 20 0 26 0;
+#X connect 21 0 20 1;
+#X connect 22 0 27 0;
+#X connect 23 0 22 1;
+#X connect 24 0 28 0;
+#X connect 25 0 24 1;
+#X connect 29 0 45 0;
+#X connect 30 0 29 1;
+#X connect 31 0 46 0;
+#X connect 32 0 31 1;
+#X connect 33 0 47 0;
+#X connect 34 0 33 1;
+#X connect 35 0 48 0;
+#X connect 36 0 35 1;
+#X connect 37 0 49 0;
+#X connect 38 0 37 1;
+#X connect 39 0 50 0;
+#X connect 40 0 39 1;
+#X connect 41 0 51 0;
+#X connect 42 0 41 1;
+#X connect 43 0 52 0;
+#X connect 44 0 43 1;
+#X connect 54 0 55 0;
+#X connect 55 0 43 0;
+#X connect 55 0 41 0;
+#X connect 55 0 39 0;
+#X connect 55 0 37 0;
+#X connect 55 0 35 0;
+#X connect 55 0 33 0;
+#X connect 55 0 31 0;
+#X connect 55 0 29 0;
+#X connect 55 0 24 0;
+#X connect 55 0 22 0;
+#X connect 55 0 20 0;
+#X connect 55 0 17 0;
+#X connect 56 0 55 1;
+#X connect 58 0 56 0;
+#X connect 59 0 58 0;
+#X connect 60 0 59 0;
+#X connect 61 0 4 0;
+#X connect 61 1 6 0;
+#X connect 62 0 61 0;

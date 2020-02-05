@@ -11,6 +11,9 @@ possible solutions:
 
 ## session mit jelko 2020-01-27
 
+### in short:
+`alsa_out -d plug:complex_convert -c 6` fügt JACK weitere soundkarte bei connections hinzu!
+
 ### helpful links:
 - https://radioangrezi.gitbook.io/studio/server
 - https://jackaudio.org/faq/multiple_devices.html
