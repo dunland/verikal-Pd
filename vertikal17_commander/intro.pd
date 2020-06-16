@@ -1,0 +1,265 @@
+#N canvas 964 29 956 998 10;
+#X obj 148 616 i;
+#X obj 218 605 + 1;
+#X msg 15 589 0;
+#X floatatom 148 641 5 0 0 0 - - -;
+#X obj 148 695 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 51 659 realtime;
+#X floatatom 51 684 9 0 0 0 - - -;
+#X obj 123 698 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 164 153 s start01;
+#X obj 160 237 s start02;
+#X obj 162 317 s start03;
+#X obj 162 395 s start04;
+#X obj 160 475 s start05;
+#X obj 166 553 s start06;
+#X obj 342 155 s start07;
+#X obj 341 236 s start08;
+#X obj 342 316 s start09;
+#X obj 343 398 s start10;
+#X obj 343 476 s start11;
+#X obj 344 557 s start12;
+#X obj 523 156 s start13;
+#X obj 523 234 s start14;
+#X obj 525 306 s start15;
+#X obj 523 385 s start16;
+#X obj 123 68 inlet;
+#X text 164 68 starts with a bang;
+#X obj 148 115 intro_perChannel;
+#X obj 122 211 intro_perChannel;
+#X obj 122 291 intro_perChannel;
+#X obj 122 371 intro_perChannel;
+#X obj 122 451 intro_perChannel;
+#X obj 122 531 intro_perChannel;
+#X obj 302 131 intro_perChannel;
+#X obj 302 211 intro_perChannel;
+#X obj 302 291 intro_perChannel;
+#X obj 302 371 intro_perChannel;
+#X obj 302 451 intro_perChannel;
+#X obj 302 531 intro_perChannel;
+#X obj 482 131 intro_perChannel;
+#X obj 482 211 intro_perChannel;
+#X obj 482 281 intro_perChannel;
+#X obj 482 361 intro_perChannel;
+#X obj 123 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 92 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 92 211 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 92 291 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 92 371 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 92 451 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 92 531 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 282 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 282 211 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 282 291 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 282 371 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 282 451 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 282 531 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 462 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 462 211 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 462 281 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 462 361 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 244 765 s killAllNoise;
+#X obj 183 740 spigot;
+#X obj 183 765 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 2 6 THE INTRO PATCH STARTS ONE TRACK AFTER ANOTHER;
+#X text 2 31 FIRST WITH NOISE \, THEN SINGLE TRANSITIONS TO SONG;
+#X obj 245 710 delay 20000;
+#X msg 245 735 0;
+#X text 341 767 kills all introductory noise;
+#X obj 183 788 print intro noise killed;
+#X obj 66 153 s~ noiseIntro01;
+#X obj 60 236 s~ noiseIntro02;
+#X obj 66 316 s~ noiseIntro03;
+#X obj 63 396 s~ noiseIntro04;
+#X obj 63 476 s~ noiseIntro05;
+#X obj 66 553 s~ noiseIntro06;
+#X obj 465 404 s i++;
+#X obj 147 582 r i++;
+#X obj 243 154 s~ noiseIntro07;
+#X obj 243 236 s~ noiseIntro08;
+#X obj 242 315 s~ noiseIntro09;
+#X obj 246 397 s~ noiseIntro10;
+#X obj 243 474 s~ noiseIntro11;
+#X obj 246 556 s~ noiseIntro12;
+#X obj 323 711 r stop;
+#X obj 323 736 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 420 234 s~ noiseIntro14;
+#X obj 422 155 s~ noiseIntro13;
+#X obj 424 305 s~ noiseIntro15;
+#X obj 423 383 s~ noiseIntro16;
+#X obj 468 176 s i++;
+#X obj 466 255 s i++;
+#X obj 467 328 s i++;
+#X obj 281 175 s i++;
+#X obj 281 259 s i++;
+#X obj 281 338 s i++;
+#X obj 281 422 s i++;
+#X obj 281 494 s i++;
+#X obj 94 174 s i++;
+#X obj 91 259 s i++;
+#X obj 91 340 s i++;
+#X obj 90 419 s i++;
+#X obj 90 500 s i++;
+#X obj 92 576 s i++;
+#X obj 279 579 s i++;
+#X obj 482 441 intro_perChannel;
+#X obj 482 521 intro_perChannel;
+#X obj 462 441 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 462 521 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 465 564 s i++;
+#X obj 467 488 s i++;
+#X obj 424 465 s~ noiseIntro17;
+#X obj 525 466 s start17;
+#X obj 423 543 s~ noiseIntro18;
+#X obj 523 545 s start18;
+#X obj 678 123 intro_perChannel;
+#X obj 678 203 intro_perChannel;
+#X obj 658 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 658 203 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 661 246 s i++;
+#X obj 663 170 s i++;
+#X obj 148 665 == 20;
+#X text 188 665 channelCount;
+#X obj 621 147 s~ noiseIntro19;
+#X obj 721 148 s start19;
+#X obj 619 225 s~ noiseIntro20;
+#X obj 719 227 s start20;
+#X connect 0 0 3 0;
+#X connect 0 0 1 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 119 0;
+#X connect 4 0 60 1;
+#X connect 5 0 6 0;
+#X connect 7 0 5 1;
+#X connect 7 0 60 0;
+#X connect 24 0 42 0;
+#X connect 26 0 43 0;
+#X connect 26 0 96 0;
+#X connect 26 0 32 0;
+#X connect 26 1 68 0;
+#X connect 26 2 8 0;
+#X connect 27 0 44 0;
+#X connect 27 0 97 0;
+#X connect 27 0 33 0;
+#X connect 27 1 69 0;
+#X connect 27 2 9 0;
+#X connect 28 0 45 0;
+#X connect 28 0 98 0;
+#X connect 28 0 34 0;
+#X connect 28 1 70 0;
+#X connect 28 2 10 0;
+#X connect 29 0 46 0;
+#X connect 29 0 99 0;
+#X connect 29 0 35 0;
+#X connect 29 1 71 0;
+#X connect 29 2 11 0;
+#X connect 30 0 47 0;
+#X connect 30 0 100 0;
+#X connect 30 0 36 0;
+#X connect 30 1 72 0;
+#X connect 30 2 12 0;
+#X connect 31 0 48 0;
+#X connect 31 0 101 0;
+#X connect 31 0 37 0;
+#X connect 31 1 73 0;
+#X connect 31 2 13 0;
+#X connect 32 0 49 0;
+#X connect 32 0 91 0;
+#X connect 32 0 38 0;
+#X connect 32 1 76 0;
+#X connect 32 2 14 0;
+#X connect 33 0 50 0;
+#X connect 33 0 92 0;
+#X connect 33 0 39 0;
+#X connect 33 1 77 0;
+#X connect 33 2 15 0;
+#X connect 34 0 51 0;
+#X connect 34 0 93 0;
+#X connect 34 0 40 0;
+#X connect 34 1 78 0;
+#X connect 34 2 16 0;
+#X connect 35 0 52 0;
+#X connect 35 0 94 0;
+#X connect 35 0 41 0;
+#X connect 35 1 79 0;
+#X connect 35 2 17 0;
+#X connect 36 0 53 0;
+#X connect 36 0 95 0;
+#X connect 36 0 103 0;
+#X connect 36 1 80 0;
+#X connect 36 2 18 0;
+#X connect 37 0 54 0;
+#X connect 37 0 102 0;
+#X connect 37 0 104 0;
+#X connect 37 1 81 0;
+#X connect 37 2 19 0;
+#X connect 38 0 55 0;
+#X connect 38 0 88 0;
+#X connect 38 0 113 0;
+#X connect 38 2 20 0;
+#X connect 39 0 56 0;
+#X connect 39 0 89 0;
+#X connect 39 0 114 0;
+#X connect 39 2 21 0;
+#X connect 40 0 57 0;
+#X connect 40 0 90 0;
+#X connect 40 0 29 0;
+#X connect 40 2 22 0;
+#X connect 41 0 58 0;
+#X connect 41 0 74 0;
+#X connect 41 0 30 0;
+#X connect 41 2 23 0;
+#X connect 42 0 5 0;
+#X connect 42 0 2 0;
+#X connect 42 0 26 0;
+#X connect 60 0 61 0;
+#X connect 61 0 64 0;
+#X connect 61 0 67 0;
+#X connect 64 0 65 0;
+#X connect 65 0 59 0;
+#X connect 75 0 0 0;
+#X connect 82 0 83 0;
+#X connect 83 0 59 0;
+#X connect 103 0 105 0;
+#X connect 103 0 108 0;
+#X connect 103 0 31 0;
+#X connect 103 2 110 0;
+#X connect 104 0 106 0;
+#X connect 104 0 107 0;
+#X connect 104 2 112 0;
+#X connect 113 0 115 0;
+#X connect 113 0 118 0;
+#X connect 113 0 27 0;
+#X connect 113 2 122 0;
+#X connect 114 0 116 0;
+#X connect 114 0 117 0;
+#X connect 114 0 28 0;
+#X connect 114 2 124 0;
+#X connect 119 0 4 0;
+#X connect 119 0 7 0;
